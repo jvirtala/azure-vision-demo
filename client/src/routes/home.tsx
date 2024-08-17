@@ -5,7 +5,7 @@ const Home: React.FC = () => {
     <div style={{ textAlign: 'center', padding: '20px' }}>
       <h1>Welcome to Azure AI Demos! 👋</h1>
       <p style={{ fontSize: '24px', marginTop: '20px' }}>
-        👈 Check out our demos in the navigation bar
+        👈 Check out the demos in the navigation bar
       </p>
     </div>
   );

@@ -8,7 +8,10 @@ const Root: React.FC = () => {
         width: '200px',
         padding: '20px',
         backgroundColor: '#f0f0f0',
-        minHeight: '100vh'
+        minHeight: '100vh',
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'flex-start',
       }}>
         <h2>Navigation</h2>
         <ul style={{ listStyleType: 'none', padding: 0 }}>

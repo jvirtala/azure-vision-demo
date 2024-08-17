@@ -1,17 +1,19 @@
-# Photo Analysis App
+# Azure AI Demos
 
-This project consists of a server and a client application for photo analysis.
+This project consists of a server and a client application for Azure AI demos.
 
 ## Development Setup
 
 ### Server
 
 1. Navigate to the server directory:
+
    ```
    cd server
    ```
 
 2. Install dependencies:
+
    ```
    npm install
    ```
@@ -25,11 +27,13 @@ This project consists of a server and a client application for photo analysis.
 ### Client
 
 1. Open a new terminal and navigate to the client directory:
+
    ```
    cd client
    ```
 
 2. Install dependencies:
+
    ```
    npm install
    ```
@@ -44,9 +48,7 @@ The client will start vite dev server running on `http://localhost:5173` and api
 ## Usage
 
 1. Open your browser and go to `http://localhost:5173`.
-2. Upload an image file using the provided form.
-3. Click "Upload and Analyze" to send the image to the server for analysis.
-4. The analysis results will be displayed on the page.
+2. Check the demos in the navigation bar.
 
 ## Development Notes
 
@@ -55,4 +57,3 @@ The client will start vite dev server running on `http://localhost:5173` and api
 - Make sure both the server and client are running simultaneously during development.
 - Any changes to the client code will be hot-reloaded automatically.
 - Ensure all required environment variables are set in the `.env` file for the server to function correctly.
-

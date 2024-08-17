@@ -13,6 +13,9 @@ const Root: React.FC = () => {
         <h2>Navigation</h2>
         <ul style={{ listStyleType: 'none', padding: 0 }}>
           <li><Link to="/">Home</Link></li>
+        </ul>
+        <h3>Demos</h3>
+        <ul style={{ listStyleType: 'none', padding: 0 }}>
           <li><Link to="/photo-analysis">Photo Analysis</Link></li>
         </ul>
       </nav>

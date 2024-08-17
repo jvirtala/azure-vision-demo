@@ -18,6 +18,9 @@ const Root: React.FC = () => {
         <ul style={{ listStyleType: 'none', padding: 0 }}>
           <li><Link to="/photo-analysis">Photo Analysis</Link></li>
         </ul>
+        <ul style={{ listStyleType: 'none', padding: 0 }}>
+          <li><Link to="/sentiment-analysis">Sentiment Analysis</Link></li>
+        </ul>
       </nav>
       <main style={{ flex: 1, padding: '20px' }}>
         <Outlet />

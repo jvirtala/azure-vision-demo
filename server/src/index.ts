@@ -25,9 +25,9 @@ app.post('/photoanalysis', upload.single('file'), async (req: Request, res: Resp
   }
 });
 
-app.get('/sentiment', async (req: Request, res: Response) => {
+app.post('/sentiment', async (req: Request, res: Response) => {
   try {
-    const text = req.query.text;
+    const text = req.body.text;
 
     if (!text || typeof text !== 'string') {
       return res.status(400).send('Text query parameter is required and must be a string.');

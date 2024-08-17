@@ -4,7 +4,7 @@
   "description": "example of azure ai usage",
   "main": "src/index.ts",
   "scripts": {
-    "start": "tsx watch src",
+    "start": "tsx --inspect-brk src/index.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Jani Virtala",

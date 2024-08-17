@@ -15,7 +15,7 @@ const createClient = (): ComputerVisionClient => {
     );
 };
 
-export const analyzePhoto = async (photoBuffer: Buffer): Promise<any> => {
+export const analyzePhoto = async (photoBuffer: Buffer): Promise<AnalysisResult> => {
     const client = createClient();
 
     try {
@@ -26,7 +26,9 @@ export const analyzePhoto = async (photoBuffer: Buffer): Promise<any> => {
         return {
             message: 'Photo analysis completed',
             size: photoBuffer.length,
-            objects: results.objects?.map(obj => ({
+            objects: results.objects?.filter((obj): obj is AnalysisObject => 
+                obj.object !== undefined && obj.confidence !== undefined
+            ).map(obj => ({
                 object: obj.object,
                 confidence: obj.confidence
             })) || []
@@ -36,3 +38,14 @@ export const analyzePhoto = async (photoBuffer: Buffer): Promise<any> => {
         throw new Error('Failed to analyze photo');
     }
 };
+
+export interface AnalysisObject {
+    object: string;
+    confidence: number;
+}
+
+export interface AnalysisResult {
+    message: string;
+    size: number;
+    objects: Array<AnalysisObject>;
+}

@@ -24,8 +24,6 @@ app.post('/photoanalysis', upload.single('file'), async (req: Request, res: Resp
   }
 });
 
-
-
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });

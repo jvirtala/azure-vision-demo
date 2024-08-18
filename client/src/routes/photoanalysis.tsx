@@ -36,16 +36,16 @@ const PhotoAnalysis: React.FC = () => {
     };
   
     return (
-      <div>
-        <h1>Photo Analysis</h1>
-        <form onSubmit={handleSubmit}>
-          <input type="file" onChange={handleFileChange} accept="image/*" />
-          <button type="submit">Upload and Analyze</button>
+      <div className='flex flex-col items-center'>
+        <h1 className='text-2xl font-bold'>Photo Analysis</h1>
+        <form className='pt-8 flex flex-col items-start gap-4' onSubmit={handleSubmit}>
+          <input className='flex-auto' type="file" onChange={handleFileChange} accept="image/*" />
+          <button type="submit" className='flex-auto bg-blue-500 text-white px-4 py-2 rounded-md'>Upload and Analyze</button>
         </form>
         {result && (
-          <div>
-            <h2>Analysis Result:</h2>
-            <pre>{result}</pre>
+          <div className='pt-8'>
+            <h2 className='text-lg font-bold'>Analysis Result:</h2>
+            <pre className='text-sm'>{result}</pre>
           </div>
         )}
       </div>

@@ -26,18 +26,19 @@ const SentimentAnalysis: React.FC = () => {
   };
 
   return (
-    <div>
-      <h1>Sentiment Analysis</h1>
-      <form onSubmit={handleSubmit}>
+    <div className='flex flex-col items-center' >
+      <h1 className='text-2xl font-bold'>Sentiment Analysis</h1>
+      <form className='pt-8 flex flex-col items-start gap-4' onSubmit={handleSubmit}>
+        <label className='text-lg font-medium flex-auto'>Enter text for sentiment analysis</label>
         <textarea
           value={text}
           onChange={handleTextChange}
           placeholder="Enter text for sentiment analysis"
           rows={5}
           cols={50}
+          className='flex-auto block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500'
         />
-        <br />
-        <button type="submit">Analyze Sentiment</button>
+        <button type="submit" className='flex-auto bg-blue-500 text-white px-4 py-2 rounded-md'>Analyze Sentiment</button>
       </form>
       {result && (
         <div>

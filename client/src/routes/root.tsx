@@ -3,29 +3,21 @@ import { Link, Outlet } from 'react-router-dom';
 
 const Root: React.FC = () => {
   return (
-    <div style={{ display: 'flex' }}>
-      <nav style={{
-        width: '200px',
-        padding: '20px',
-        backgroundColor: '#f0f0f0',
-        minHeight: '100vh',
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'flex-start',
-      }}>
-        <h2>Navigation</h2>
-        <ul style={{ listStyleType: 'none', padding: 0 }}>
+    <div className="flex h-dvh">
+      <nav
+        className="flex flex-col flex-align-start pt-10 px-8 bg-gray-50">
+        <ul className='list-none space-y-2 font-medium'>
           <li><Link to="/">Home</Link></li>
         </ul>
-        <h3>Demos</h3>
-        <ul style={{ listStyleType: 'none', padding: 0 }}>
+        <ul className='list-none space-y-2 font-medium text-gray-900'>
           <li><Link to="/photo-analysis">Photo Analysis</Link></li>
         </ul>
-        <ul style={{ listStyleType: 'none', padding: 0 }}>
+        <ul className='list-none space-y-2 font-medium'>
           <li><Link to="/sentiment-analysis">Sentiment Analysis</Link></li>
         </ul>
       </nav>
-      <main style={{ flex: 1, padding: '20px' }}>
+      <main
+      className='flex-1 p-20'>
         <Outlet />
       </main>
     </div>

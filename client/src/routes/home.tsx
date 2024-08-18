@@ -2,9 +2,11 @@ import React from 'react';
 
 const Home: React.FC = () => {
   return (
-    <div style={{ textAlign: 'center', padding: '20px' }}>
+    <div 
+        className='text-center p-20 text-2xl'>
       <h1>Welcome to Azure AI Demos! 👋</h1>
-      <p style={{ fontSize: '24px', marginTop: '20px' }}>
+      <p 
+        className='mt-10 text-xl'>
         👈 Check out the demos in the navigation bar
       </p>
     </div>

@@ -2,9 +2,9 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Root from './routes/root.tsx'
-import Home from './routes/home.tsx'
-import PhotoAnalysis from './routes/photoanalysis.tsx'
-import SentimentAnalysis from './routes/sentimentanalysis.tsx'
+import Home from './routes/Home'
+import PhotoAnalysis from './routes/PhotoAnalysis'
+import SentimentAnalysis from './routes/SentimentAnalysis'
 import './index.css'
 
 

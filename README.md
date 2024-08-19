@@ -7,7 +7,7 @@ This project consists of a server and a client application for Azure AI demos.
 ### Install dependencies
 
 ```
-   pnpm i
+pnpm i
 ```
 
 ### Server

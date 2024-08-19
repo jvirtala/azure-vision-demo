@@ -4,6 +4,12 @@ This project consists of a server and a client application for Azure AI demos.
 
 ## Development Setup
 
+### Install dependencies
+
+```
+   pnpm i
+```
+
 ### Server
 
 1. Navigate to the server directory:
@@ -12,13 +18,7 @@ This project consists of a server and a client application for Azure AI demos.
    cd server
    ```
 
-2. Install dependencies:
-
-   ```
-   npm install
-   ```
-
-3. Create a `.env` file in the server directory and add the following environment variables:
+2. Create a `.env` file in the server directory and add the following environment variables:
    ```
    AZURE_VISION_ENDPOINT=your_azure_vision_endpoint_here
    AZURE_VISION_KEY=your_azure_vision_key_here
@@ -32,15 +32,9 @@ This project consists of a server and a client application for Azure AI demos.
    cd client
    ```
 
-2. Install dependencies:
-
+2. Start the client development server:
    ```
-   npm install
-   ```
-
-3. Start the client development server:
-   ```
-   npm run dev
+   pnpm run dev
    ```
 
 The client will start vite dev server running on `http://localhost:5173` and api running on `http://localhost:3000`.

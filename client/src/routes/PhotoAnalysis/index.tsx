@@ -25,7 +25,7 @@ const PhotoAnalysis: React.FC = () => {
     formData.append("file", file);
 
     try {
-      const response = await axios.post<any, AnalysisResult>(
+      const response = await axios.post<AnalysisResult>(
         "/api/photoanalysis",
         formData,
         {
@@ -34,7 +34,7 @@ const PhotoAnalysis: React.FC = () => {
           },
         }
       );
-      setResult(response);
+      setResult(response.data);
     } catch (error) {
       console.error("Error uploading file:", error);
       setError("Error uploading file. Please try again.");
